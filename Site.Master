@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SistemaCotizacionPrestamos.Web.SiteMaster" %>
+
+
+
+    <!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Cotización para Préstamos</title>
+
+    <link href="~/CSS/Estilos.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+
+<body>
+    <form runat="server">
+        <div class="contenedor-principal">
+
+            <header class="encabezado">
+                <div class="logo-sistema">
+                    RPK | Sistema de Cotización para Préstamos
+                </div>
+
+                <div class="usuario-sesion">
+                    Usuario: <asp:Label ID="lblUsuarioSesion" runat="server" Text="Invitado"></asp:Label>
+                </div>
+            </header>
+
+            <nav class="menu">
+    <a href="/Default.aspx">🏠 Inicio</a>
+    <a href="/Clientes/ListaClientes.aspx">👥 Clientes</a>
+    <a href="/Encuestas/FormularioEncuesta.aspx">📝 Encuestas</a>
+    <a href="/Catalogos/ListaCatalogos.aspx">📚 Catálogos</a>
+    <a href="/Usuarios/ListaUsuarios.aspx">👤 Usuarios</a>
+    <a href="/Login/Login.aspx">🚪 Cerrar sesión</a>
+</nav>
+
+            <main class="contenido">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </main>
+
+            <footer class="pie-pagina">
+                © 2026 Universidad Castro Carazo - Programación VI
+            </footer>
+
+        </div>
+    </form>
+</body>
+</html>

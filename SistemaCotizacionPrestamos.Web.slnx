@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../apiPrueba/ApiPrestamos/ApiPrestamos.csproj" />
+  <Project Path="SistemaCotizacionPrestamos.Web.csproj" Id="73cfb082-87c0-465d-9a7c-dcb4c9a0e90d" />
+</Solution>
