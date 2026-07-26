@@ -50,7 +50,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -320,39 +319,14 @@
     <Compile Include="Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\CapacidadPago.cs" />
-    <Compile Include="Models\Cliente.cs" />
-    <Compile Include="Models\Encuesta.cs" />
-    <Compile Include="Models\Genero.cs" />
-    <Compile Include="Models\MedioContratacio.cs" />
-    <Compile Include="Models\NivelEducativo.cs" />
-    <Compile Include="Models\Plazo.cs" />
-    <Compile Include="Models\Pregunta.cs" />
-    <Compile Include="Models\RangoEdad.cs" />
-    <Compile Include="Models\RangoIngresos.cs" />
-    <Compile Include="Models\Respuesta.cs" />
-    <Compile Include="Models\Rol.cs" />
-    <Compile Include="Models\TasaIntereses.cs" />
-    <Compile Include="Models\TipoPrestamo.cs" />
-    <Compile Include="Models\Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ApiConfig.cs" />
-    <Compile Include="Services\CapacidadPagoService.cs" />
     <Compile Include="Services\CatalogoService.cs" />
     <Compile Include="Services\ClienteService.cs" />
     <Compile Include="Services\EncuestaService.cs" />
-    <Compile Include="Services\GeneroService.cs" />
-    <Compile Include="Services\MedioContratacionService.cs" />
-    <Compile Include="Services\NivelEducativoService.cs" />
-    <Compile Include="Services\PlazoService.cs" />
     <Compile Include="Services\PreguntaService.cs" />
-    <Compile Include="Services\RangoEdadService.cs" />
-    <Compile Include="Services\RangoIngresosService.cs" />
     <Compile Include="Services\RespuestaService.cs" />
-    <Compile Include="Services\RolService.cs" />
-    <Compile Include="Services\TasaInteresService.cs" />
-    <Compile Include="Services\TipoPrestamoService.cs" />
-    <Compile Include="Services\UsuariosService.cs" />
+    <Compile Include="Services\UsuarioService.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

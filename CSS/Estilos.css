@@ -1,0 +1,270 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+.contenedor-principal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado {
+    background-color: #0b2f4f;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-sistema {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.usuario-sesion {
+    font-size: 14px;
+}
+
+.menu {
+    background-color: #145374;
+    padding: 10px 30px;
+}
+
+    .menu a {
+        color: white;
+        text-decoration: none;
+        margin-right: 25px;
+        font-weight: bold;
+    }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+.contenido {
+    flex: 1;
+    padding: 30px;
+}
+
+.tarjeta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    margin-bottom: 20px;
+}
+
+.titulo-pagina {
+    color: #0b2f4f;
+    margin-bottom: 20px;
+}
+
+.boton-principal {
+    background-color: #0b2f4f;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .boton-principal:hover {
+        background-color: #145374;
+    }
+
+.boton-secundario {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.campo {
+    width: 100%;
+    padding: 9px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.etiqueta {
+    font-weight: bold;
+}
+
+.mensaje-error {
+    color: #b00020;
+    font-weight: bold;
+}
+
+.mensaje-exito {
+    color: #1b7f35;
+    font-weight: bold;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+    .tabla th {
+        background-color: #0b2f4f;
+        color: white;
+        padding: 10px;
+    }
+
+    .tabla td {
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+
+.pie-pagina {
+    background-color: #0b2f4f;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+
+
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.tarjeta-menu {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 3px 12px rgba(0,0,0,.10);
+    border-top: 5px solid #0b2f4f;
+    transition: .25s;
+    min-height: 310px;
+}
+
+    .tarjeta-menu:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    }
+
+.icono {
+    width: 110px;
+    height: 110px;
+    margin: 15px auto 20px;
+    border-radius: 50%;
+    background: #eef5fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+    .icono img,
+    .img-dashboard {
+        width: 65px !important;
+        height: 65px !important;
+        object-fit: contain;
+    }
+
+.tarjeta-menu h2 {
+    font-size: 28px;
+    color: #0b2f4f;
+    margin: 0 0 10px 0;
+}
+
+.tarjeta-menu p {
+    color: #666;
+    line-height: 1.5;
+    min-height: 60px;
+}
+
+.btn-card {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 26px;
+    background: #0b2f4f;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .dashboard,
+    .estadisticas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard,
+    .estadisticas {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.estadisticas {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,.10);
+    border-left: 6px solid #145374;
+}
+
+.stat-icono {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .stat-icono img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+@media (max-width: 700px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
