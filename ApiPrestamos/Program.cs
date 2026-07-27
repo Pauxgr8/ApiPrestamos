@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+const string PoliticaWebForms = "WebFormsPermitida";
+
 // Add services to the container.
 string connectionString = builder.Configuration
     .GetConnectionString("DefaultConnection")
@@ -31,7 +33,19 @@ builder.Services.AddScoped<PreguntaRepository>();
 builder.Services.AddScoped<EncuestaRepository>();
 builder.Services.AddScoped<RespuestaRepository>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(PoliticaWebForms, policy =>
+    {
+        policy
+            .WithOrigins("https://localhost:44319")
+            .WithMethods("GET", "POST", "PUT", "DELETE")
+            .WithHeaders("Content-Type", "Authorization");
+    });
+});
+
 builder.Services.AddControllers();
+
 
 // Configuración de OpenAPI si es necesario
 builder.Services.AddEndpointsApiExplorer();
@@ -52,8 +66,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+
+app.UseCors(PoliticaWebForms);
+
 app.UseAuthorization();
 
 app.MapControllers();
-
 app.Run();
